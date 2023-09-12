@@ -13,6 +13,7 @@
 		F55203112AB0925B009752A5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F55203102AB0925B009752A5 /* Preview Assets.xcassets */; };
 		F55203182AB09296009752A5 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55203172AB09296009752A5 /* DataService.swift */; };
 		F552031A2AB096C0009752A5 /* GistestViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55203192AB096C0009752A5 /* GistestViewModel.swift */; };
+		F5CF23B62AB0F3D500606F6A /* Gist.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CF23B52AB0F3D500606F6A /* Gist.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		F55203102AB0925B009752A5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		F55203172AB09296009752A5 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		F55203192AB096C0009752A5 /* GistestViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GistestViewModel.swift; sourceTree = "<group>"; };
+		F5CF23B52AB0F3D500606F6A /* Gist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gist.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 				F552030F2AB0925B009752A5 /* Preview Content */,
 				F55203172AB09296009752A5 /* DataService.swift */,
 				F55203192AB096C0009752A5 /* GistestViewModel.swift */,
+				F5CF23B52AB0F3D500606F6A /* Gist.swift */,
 			);
 			path = "RestApi-Swift";
 			sourceTree = "<group>";
@@ -143,6 +146,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F5CF23B62AB0F3D500606F6A /* Gist.swift in Sources */,
 				F552031A2AB096C0009752A5 /* GistestViewModel.swift in Sources */,
 				F55203182AB09296009752A5 /* DataService.swift in Sources */,
 				F552030C2AB09258009752A5 /* ContentView.swift in Sources */,
