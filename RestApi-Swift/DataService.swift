@@ -11,7 +11,7 @@ class DataService {
     static let shared = DataService()
     fileprivate let baseUrlString = "https://api.github.com" // base url
     
-    func fetchGists(){
+    func fetchGists(completion: @escaping (Result<Any,Error>) -> Void ){
         
         var componentURL = URLComponents()
         componentURL.scheme = "https"
@@ -30,18 +30,19 @@ class DataService {
             if let httpResponse = response as? HTTPURLResponse { // as : convert to HTTPURLResponse
                 print("API status : \(httpResponse.statusCode)") // HTTP (Status) example : 200/201 = OK, 404: host not find, 500 error in server .... 401, 403 : permession ..
             }
-//            get data from httpReponse
+            
+            // get data from httpResponse
             guard let validData = data, error == nil else {
-                print("API error: \(error?.localizedDescription)")
+                completion(.failure(error!))
                 return
             }
             
             do {
-//                try to convert data to Json format
+                // try to convert data to JSON format
                 let json = try JSONSerialization.jsonObject(with: validData, options: [])
-                print(json)
+                completion(.success(json))
             }catch let serializationError {
-                print(serializationError.localizedDescription)
+                completion(.failure(serializationError))
             }
             
         }.resume() // run data task
