@@ -11,7 +11,7 @@ import SwiftUI
 struct RestApi_SwiftApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView(viewModel: GistsViewModel())
         }
     }
 }
