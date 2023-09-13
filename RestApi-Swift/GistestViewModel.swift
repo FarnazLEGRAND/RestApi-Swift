@@ -14,6 +14,14 @@ final class GistsViewModel : ObservableObject {
     
     init()
     {
+        DataService.shared.createNewGist{ (result) in
+            switch result {
+            case .success(let json): print(json)
+            case .failure(let error): print(error)
+            }
+        }
+        
+        /*
         DataService.shared.fetchGists { (result) in
             switch result {
             case .success(let gists):
@@ -22,6 +30,6 @@ final class GistsViewModel : ObservableObject {
                 }
             case .failure(let error): print(error)
             }
-        }
+        }*/
     }
 }
